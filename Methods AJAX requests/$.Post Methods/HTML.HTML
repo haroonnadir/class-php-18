@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX POST Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#submit-form').click(function() {
+                $.post('process_form.php', { name: 'John Doe', email: 'john.doe@example.com' }, function(response) {
+                    $('#result').html(response);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>AJAX POST Example</h1>
+    <button id="submit-form">Submit Form</button>
+    <div id="result"></div>
+</body>
+</html>

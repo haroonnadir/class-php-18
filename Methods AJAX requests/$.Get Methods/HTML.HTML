@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX GET Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fetch-data').click(function() {
+                $.get('fetch_data.php', { id: 1 }, function(response) {
+                    $('#result').html(response);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>AJAX GET Example</h1>
+    <button id="fetch-data">Fetch Data</button>
+    <div id="result"></div>
+</body>
+</html>
